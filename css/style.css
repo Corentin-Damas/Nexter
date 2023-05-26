@@ -1,0 +1,32 @@
+/*
+0-600px       Phone
+600 - 900px   Tablet portrait
+900 - 1200px  Tablet landscape
+1200 - 1800px Desktock  [normal design created for]
+1800px +      Big Desktock
+
+$breakpoint argument choices:
+- first-break 1200px first design breakpoint
+- second-break 1100px 2nd design breakpoint
+- third-break 900px 3rd design breakpoint
+- four-break 600px 4th design breakpoint
+- five-break 500px 5th design breakpoint
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6; }
