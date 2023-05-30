@@ -8,6 +8,9 @@
 
 html {
   font-size: 62.5%;
+  @include respond(first-break) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -26,4 +29,18 @@ body {
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];
+
+  @include respond(second-break) {
+    grid-template-rows: 6vh 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @include respond(third-break) {
+    grid-template-rows: 6vh 94vh;
+  }
 }

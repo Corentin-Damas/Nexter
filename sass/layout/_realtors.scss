@@ -9,12 +9,24 @@
   flex-direction: column;
   gap: 2rem;
 
+  @include respond(third-break) {
+    grid-column: 1/-1;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     row-gap: 5vh;
     column-gap: 2rem;
     align-items: center;
+
+    @include respond(third-break) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @include respond(four-break) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
